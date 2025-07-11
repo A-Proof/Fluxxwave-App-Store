@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fluxxwave Catalog</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    input[type="text"] {
+      width: 100%; padding: 0.5em; font-size: 1rem; margin-bottom: 1em;
+    }
+    .entry {
+      border-bottom: 1px solid #ccc;
+      padding: 1em 0;
+    }
+    .entry h3 { margin: 0 0 0.5em 0; }
+  </style>
+</head>
+<body>
+  <h1>Fluxxwave Public Submissions</h1>
+  <input type="text" id="search" placeholder="Search by name or description..." />
+  <div id="catalog"></div>
+  <script>
+    const entries = [
+      {{ name: "Arthur", email: "arthur@example.com", desc: "Pullmaker template", file: "pullmaker.swift" }},
+      {{ name: "Jane Doe", email: "jane@dev.com", desc: "Sideroad debug toggler", file: "sideroad.swift" }}
+    ];
+    const catalog = document.getElementById('catalog');
+    const search = document.getElementById('search');
+
+    function render(list) {
+      catalog.innerHTML = '';
+      list.forEach(entry => {{
+        catalog.innerHTML += `
+          <div class="entry">
+            <h3>${{entry.name}}</h3>
+            <p>${{entry.desc}}</p>
+            <code>${{entry.file}}</code>
+          </div>
+        `;
+      }});
+    }
+
+    search.addEventListener('input', () => {{
+      const query = search.value.toLowerCase();
+      const filtered = entries.filter(e =>
+        e.name.toLowerCase().includes(query) ||
+        e.desc.toLowerCase().includes(query)
+      );
+      render(filtered);
+    }});
+
+    render(entries);
+  </script>
+</body>
+</html>
