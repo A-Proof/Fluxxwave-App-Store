@@ -1,0 +1,41 @@
+{
+  "name": "My Example Source",
+  "subtitle": "A source for all of my apps",
+  "description": "Welcome to my source! Here you'll find all of my apps.",
+  "iconURL": "https://i.imgur.com/pqIZoZo.jpeg",
+  "website": "https://altstudio.app",
+  "patreonURL": "https://patreon.com/altstudio",
+  "tintColor": "#6156e2",
+  "featuredApps": [],
+  "apps": [
+    {
+      "name": "MyTermy",
+      "bundleIdentifier": "Overseer-Application-Team.MyTermy",
+      "marketplaceID": "",
+      "developerName": "Overseer Applications",
+      "subtitle": "No jailbreak SSH app via Network.",
+      "localizedDescription": "This app (MyTermy) allows you to netcat to a app created sub server header ip (SSHI) Then run remote commands to your iPad.",
+      "iconURL": "https://i.imgur.com/cy22whi.jpeg",
+      "tintColor": "#70738e",
+      "category": "other",
+      "screenshots": [],
+      "versions": [
+        {
+          "downloadURL": "https://a-proof.github.io/Fluxxwave-App-Store/91c4c4a4-621c-460d-b9eb-b18df895f62b.ipa",
+          "size": 124000000,
+          "version": "1.0.0",
+          "buildVersion": "",
+          "date": "2025-08-03T23:14:00-04:00",
+          "localizedDescription": null,
+          "minOSVersion": null
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "patreon": {}
+    }
+  ],
+  "news": []
+}
